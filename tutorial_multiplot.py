@@ -91,7 +91,8 @@ for i in range(0, len(plate_num)):
     #N2 SUBPLOT
     n2_plot = fig.add_subplot(2, 3, 2)
     plt.title('NII Flux Map')
-    n2_plot.imshow(N2, cmap = "magma", extent = shapemap, zorder = 1)
+    im = n2_plot.imshow(N2, cmap = "magma", extent = shapemap, zorder = 1)
+    plt.colorbar(mappable=im)
     plt.xlabel('Arcseconds')
     plt.ylabel('Arcseconds')
     
